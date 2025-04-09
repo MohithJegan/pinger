@@ -1,0 +1,16 @@
+name: Ping AI Portfolio
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Every 5 minutes
+  workflow_dispatch:      # Optional: allows manual triggering
+
+jobs:
+  ping-sites:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call Backend Portfolio
+        run: curl -s https://http5222-assignment-1-1.onrender.com/
+
+      
